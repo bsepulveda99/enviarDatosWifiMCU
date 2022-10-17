@@ -84,10 +84,10 @@ void loop() {
         return;
       }
     }
-
+    //Este while sirve para capturar la respuesta del servidor.
     while (client.available()) {
 
-      line = client.readStringUntil('\r');
+      line = client.readStringUntil('\n');
     }
 
     Serial.println(line);
